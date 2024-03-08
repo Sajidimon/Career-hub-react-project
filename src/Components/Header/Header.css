@@ -1,3 +1,7 @@
 ul li .active {
     color: red !important;
 }
+.navbar-end a{
+    background-color: #7E90FE;
+    color: #fff;
+}
