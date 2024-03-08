@@ -7,15 +7,22 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root';
 import Home from './Components/Home/Home';
+import Appliedjob from './Components/Appliedjobs/Appliedjob';
+import Error from './Components/Errorpage/Error';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/applied',
+        element: <Appliedjob></Appliedjob>
       }
     ]
     
