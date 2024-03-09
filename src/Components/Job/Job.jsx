@@ -1,11 +1,12 @@
-
+import { MdLocationOn } from "react-icons/md";
+import { HiOutlineCurrencyBangladeshi } from "react-icons/hi";
 
 const Job = ({ job }) => {
 
     const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl my-5">
                 <figure className=""><img src={logo} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{job_title}</h2>
@@ -14,9 +15,9 @@ const Job = ({ job }) => {
                         <button className="btn btn-outline btn-info mx-1">{remote_or_onsite}</button>
                         <button className="btn btn-outline btn-info mx-1">{job_type}</button>
                     </div>
-                    <div>
-                        <span className="mx-1">{location}</span>
-                        <span className="mx-1">{salary}</span>
+                    <div className="my-4 flex">
+                        <h2 className="mx-1 flex"><MdLocationOn className="text-2xl mr-2"></MdLocationOn>{location}</h2>
+                        <h2 className="mx-1 flex"> <HiOutlineCurrencyBangladeshi className="text-2xl mr-2"></HiOutlineCurrencyBangladeshi>{salary}</h2>
                     </div>
                     <div className="card-actions">
 
